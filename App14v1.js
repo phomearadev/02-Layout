@@ -1,46 +1,51 @@
 import React, { useState, Component } from "react";
 import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
 
-const MyContentLayout = () => {
+const AlignContentLayout = () => {
   //const [alignContent, setAlignContent] = useState("flex-start");
   const [alignContent, setAlignContent] = useState("center");
 
   return (
     <PreviewLayout
-      label="My alignContent!"
+      label="alignContent"
       selectedValue={alignContent}
       values={[
       //  "flex-start",
       //  "flex-end",
       //  "stretch",
       //  "center",
-      //  "space-between",
-      //  "space-around",
+      // "space-between",
+      // "space-around",
       ]}
       setSelectedValue={setAlignContent}>
+        
       <View
-      //  style={[styles.box, { backgroundColor: "orangered" }]}
+        style={[styles.box, { backgroundColor: "orange" }]}
+        //style={[styles.box, { backgroundColor: "red" }]}
+/>
+      <View
+       //  style={[styles.box, { backgroundColor: "grey" }]}
+       // style={[styles.box, { backgroundColor: "red" }]}
       />
       <View
-      //  style={[styles.box, { backgroundColor: "orange" }]}
+        //style={[styles.box, { backgroundColor: "grey" }]}
+        //style={[styles.box, { backgroundColor: "mediumseagreen" }]}
       />
       <View
-      //  style={[styles.box, { backgroundColor: "mediumseagreen" }]}
+       //style={[styles.box, { backgroundColor: "grey" }]}
+       // style={[styles.box, { backgroundColor: "deepskyblue" }]}
       />
       <View
-        style={[styles.box, { backgroundColor: "deepskyblue" },
-        <Text> BOX 2 </Text>,
-       ]}
-      />
-      <View
+      // style={[styles.box, { backgroundColor: "grey" }]}
       //  style={[styles.box, { backgroundColor: "mediumturquoise" }]}
       />
       <View
-        style={[styles.box, { backgroundColor: "mediumslateblue" }]}
+      style={[styles.topbox, { backgroundColor: "blue" }]}
+      //style={[styles.box, { backgroundColor: "mediumslateblue" }]}
       />
-      <Text style={styles.box}> BOX 2 </Text>
-      <View
-      //  style={[styles.box, { backgroundColor: "purple" }]}
+       <View
+      style={[styles.topbox, { backgroundColor: "red" }]}
+      //style={[styles.box, { backgroundColor: "mediumslateblue" }]}
       />
     </PreviewLayout>
   );
@@ -82,17 +87,7 @@ const PreviewLayout = ({
         styles.container,
         { [label]: selectedValue },
       ]}
-      
     >
-       
-    </View>
-    <View
-      style={[
-        styles.container2,
-        { [label]: selectedValue },
-      ]}
-    >
-     
       {children}
     </View>
   </View>
@@ -101,46 +96,26 @@ const PreviewLayout = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //flexWrap: "wrap",
-    //marginTop: 8,
-    //backgroundColor: "aliceblue",
-    //backgroundColor: "red",
-    backgroundColor: "magenta",
-    maxHeight: 240,
-    fontSize: 20,
-    alignItems: "center",
-    textAlign: "center",
-    fontWeight: "500",
-    color: "blue",
-  },
-  container2: {
-    flex: 1,
     flexWrap: "wrap",
-    //marginTop: 8,
-    //backgroundColor: "blue",
-    //backgroundColor: "aliceblue",
-    maxHeight: 300,
-    //alignItems: "center",
-    //textAlign: "center",
-    //fontWeight: "500",
-    //color: "red",
+    marginTop: 8,
+    backgroundColor: "aliceblue",
+    maxHeight: 150,
+    flex: 2,
+    flexWrap: "wrap",
+    marginTop: 8,
+    backgroundColor: "aliceblue",
+    maxHeight: 150,
   },
-  container3: {
-    //backgroundColor: "aliceblue",
-    maxHeight: 300,
-    fontSize: 20,
-    alignItems: "center",
-    textAlign: "center",
-    fontWeight: "500",
-    color: "red",
+  topbox: {
+    width: 50,
+    height: 150,
+  alignContent: "center",
+  alignSelf: "center"
   },
   box: {
-    width: 185,
-    height: 450,
-    alignItems: "center",
-    textAlign: "center",
-    fontWeight: "500",
-    color: "red",
+    width: 50,
+    height: 200,
+    //alignSelf: "stretch"
   },
   row: {
     flexDirection: "row",
@@ -173,9 +148,9 @@ const styles = StyleSheet.create({
   label: {
     textAlign: "center",
     marginBottom: 10,
-    marginTop: 40,
+    marginTop: 30,
     fontSize: 24,
   },
 });
 
-export default MyContentLayout;
+export default AlignContentLayout;

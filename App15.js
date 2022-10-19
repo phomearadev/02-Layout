@@ -28,9 +28,7 @@ const MyContentLayout = () => {
       //  style={[styles.box, { backgroundColor: "mediumseagreen" }]}
       />
       <View
-        style={[styles.box, { backgroundColor: "deepskyblue" },
-        <Text> BOX 2 </Text>,
-       ]}
+        style={[styles.box, { backgroundColor: "deepskyblue" }]}
       />
       <View
       //  style={[styles.box, { backgroundColor: "mediumturquoise" }]}
@@ -38,7 +36,6 @@ const MyContentLayout = () => {
       <View
         style={[styles.box, { backgroundColor: "mediumslateblue" }]}
       />
-      <Text style={styles.box}> BOX 2 </Text>
       <View
       //  style={[styles.box, { backgroundColor: "purple" }]}
       />
@@ -82,9 +79,7 @@ const PreviewLayout = ({
         styles.container,
         { [label]: selectedValue },
       ]}
-      
     >
-       
     </View>
     <View
       style={[
@@ -101,46 +96,24 @@ const PreviewLayout = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //flexWrap: "wrap",
+    flexWrap: "wrap",
     //marginTop: 8,
     //backgroundColor: "aliceblue",
     //backgroundColor: "red",
     backgroundColor: "magenta",
     maxHeight: 240,
-    fontSize: 20,
-    alignItems: "center",
-    textAlign: "center",
-    fontWeight: "500",
-    color: "blue",
   },
   container2: {
     flex: 1,
     flexWrap: "wrap",
     //marginTop: 8,
     //backgroundColor: "blue",
-    //backgroundColor: "aliceblue",
+    backgroundColor: "aliceblue",
     maxHeight: 300,
-    //alignItems: "center",
-    //textAlign: "center",
-    //fontWeight: "500",
-    //color: "red",
-  },
-  container3: {
-    //backgroundColor: "aliceblue",
-    maxHeight: 300,
-    fontSize: 20,
-    alignItems: "center",
-    textAlign: "center",
-    fontWeight: "500",
-    color: "red",
   },
   box: {
     width: 185,
     height: 450,
-    alignItems: "center",
-    textAlign: "center",
-    fontWeight: "500",
-    color: "red",
   },
   row: {
     flexDirection: "row",

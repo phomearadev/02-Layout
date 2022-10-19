@@ -38,7 +38,6 @@ const MyContentLayout = () => {
       <View
         style={[styles.box, { backgroundColor: "mediumslateblue" }]}
       />
-      <Text style={styles.box}> BOX 2 </Text>
       <View
       //  style={[styles.box, { backgroundColor: "purple" }]}
       />
@@ -84,7 +83,11 @@ const PreviewLayout = ({
       ]}
       
     >
-       
+       <Text style={styles.container}> </Text>
+       <Text style={styles.container}> </Text>
+      <Text style={styles.container}> BOX 1 </Text>
+       <Text style={styles.container}> </Text>
+      <Text style={styles.container}> </Text>
     </View>
     <View
       style={[
